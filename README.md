@@ -63,9 +63,8 @@ HOW TO DEPLOY THE INFRASTRUCTURE
     There are two ways for deploying the infrastructure
 
     1. Automation
-    Push the "Main" directory to your github account.
-    NOTE: The workflow needs user interaction to either create or destroy, this make user ability to destroy the infrastructure by re running the job and inserting 2 when asked.
-    You can comment out the user input to avoid user interaction.
+    Push the "Main" directory to your github account, deployement of the infrastructure begins auto,atically.
+    
 
     2. Manual 
     Run terraform init, to initialize the terraform provider configuration
@@ -75,3 +74,5 @@ STEPS TO VALIDATE THE SETUP
     To validate this setup, copy and paste the load balancer dns name that is outputed after your resources have been created into your browser.
     You should get a response Congratulating you for installing Nginix - just like the image below:
     NOTE: Wait for a while so the the ec2 instance initialises and the user data runs copletely.
+
+        
