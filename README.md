@@ -50,6 +50,7 @@ ASSUMPTIONS
     1. This project include a backend configuration where state files are stored for security reasons. It is therefore assumed that an s3 bucket already exist for that. If not, comment out the backend configuration in the provider.tf to avoid errors when applying.
 
     2. It is assumed that the keypair attached to the ec2 instance already exist. So the keyname in the ec2 configuration must reference that. If not then comment out the keyname section
+    
 
 HOW TO DEPLOY THE INFRASTRUCTURE
 
