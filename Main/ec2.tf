@@ -13,3 +13,5 @@ resource "aws_instance" "main" {
     Name = "${var.tag_prefix} Server"
   }
 }
+
+
