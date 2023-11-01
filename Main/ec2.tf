@@ -12,3 +12,4 @@ resource "aws_instance" "main" {
   tags = {
     Name = "${var.tag_prefix} Server"
   }
+}
