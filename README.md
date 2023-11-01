@@ -5,9 +5,9 @@ OBJECTIVES
 PROJECT STRUCTURE
 
     Within this Jomacs terraform project are three directories
-    .github repo
-    Main repo
-    Modules
+   * .github repo
+   * Main repo
+   * Modules
 
 
     The Main directory is the root directory, which contains all the individual
@@ -64,7 +64,7 @@ HOW TO DEPLOY THE INFRASTRUCTURE
 
     1. Automation
     Push the "Main" directory to your github account.
-    NOTE: The workflow needs user interaction to either create or destroy, this make user ability to destroy the infrastructure by re running the job and inserting 2 when asked.
+    NOTE: The workflow needs user interaction to either create or destroy, this make user ability to destroy the infrastructure by re running the job and inserting 2 when         asked.
     You can comment out the user input to avoid user interaction.
 
     2. Manual 
