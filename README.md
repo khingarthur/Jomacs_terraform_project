@@ -1,6 +1,5 @@
 OBJECTIVES
-
-    This Terraform project deploys a secure VPC environment in AWS with an EC2 instance running an Nginx web server. The EC2 instance resides within a private subnet and is accessible to the outside world via a load balancer. Traffic to the EC2 instance is routed through a NAT gateway.
+This Terraform project deploys a secure VPC environment in AWS with an EC2 instance running an Nginx web server. The EC2 instance resides within a private subnet and is accessible to the outside world via a load balancer. Traffic to the EC2 instance is routed through a NAT gateway.
 
 PROJECT STRUCTURE
 
@@ -46,9 +45,9 @@ PROJECT STRUCTURE
     The .githubactions directory contains workflow in a yml file for automating the deployement process using GitHub actions.
 
 ASSUMPTIONS
-    1. This project include a backend configuration where state files are stored for security reasons. It is therefore assumed that an s3 bucket already exist for that. If not, comment out the backend configuration in the provider.tf to avoid errors when applying.
+1. This project include a backend configuration where state files are stored for security reasons. It is therefore assumed that an s3 bucket already exist for that. If not, comment out the backend configuration in the provider.tf to avoid errors when applying.
 
-    2. It is assumed that the keypair attached to the ec2 instance already exist. So the keyname in the ec2 configuration must reference that. If not then comment out the keyname section
+2. It is assumed that the keypair attached to the ec2 instance already exist. So the keyname in the ec2 configuration must reference that. If not then comment out the keyname section
     
 
 HOW TO DEPLOY THE INFRASTRUCTURE
