@@ -7,9 +7,10 @@ resource "aws_instance" "main" {
   security_groups             = [var.instance_sg]
   associate_public_ip_address = var.bool_2
   key_name                    = "my-keypair"
-  user_data                   = base64encode(file("~/Desktop/git/Jomacs_terraform_project/Main/script.sh"))
+  user_data                   = base64encode(file("~\Desktopgit/Jomacs_terraform_project/Modules/ec2/script.sh"))
 
   tags = {
     Name = "${var.ec2_name}"
   }
 }
+
