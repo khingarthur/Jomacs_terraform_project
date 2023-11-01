@@ -78,7 +78,8 @@ This Terraform project deploys a secure VPC environment in AWS with an EC2 insta
 
 <h2>STEPS TO VALIDATE THE SETUP<h2>
     To validate this setup, copy and paste the load balancer dns name that is outputed after your resources have been created into your browser.
-    You should get a response Congratulating you for installing Nginix - just like the image below:
+    You should get a response "JOMACS Terraform Project To Install Nginx Complete"
+    
     NOTE: Wait for a while so the the ec2 instance initialises and the user data runs copletely.
 
-        
+    
