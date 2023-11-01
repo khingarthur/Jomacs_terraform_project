@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: source/Main
+        working-directory: Main
     
     steps:
     - name: Checkout Repo
