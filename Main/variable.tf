@@ -27,7 +27,7 @@ variable "type" {
 variable "keyname" {
   description = "Name of key pair to use for ssh"
   type        = string
-  default     = "my-keypair"
+  default     = "Linux_machine"
   sensitive   = true
 }
 
