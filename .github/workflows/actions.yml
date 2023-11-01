@@ -36,27 +36,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
         
-    - name: Prompt for action
-      id: prompt
-      run: |
-        echo "Choose an action:"
-        echo "1. Apply"
-        echo "2. Destroy"
-        read -p "Enter your choice (1 or 2): " choice
-        echo "::set-output name=choice::$choice"
-    
-    - name: Terraform Apply or Destroy
-      if: steps.prompt.outputs.choice == '1' || steps.prompt.outputs.choice == '2'
-      run: |
-        if [[ "${{ steps.prompt.outputs.choice }}" == "1" ]]; then
-          terraform apply tfplan
-        else
-          terraform destroy -auto-approve
-        fi
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
       env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
       with:
