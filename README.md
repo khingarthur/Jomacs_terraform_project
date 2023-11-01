@@ -26,8 +26,7 @@ PROJECT STRUCTURE
     11. store.tf
     12. script.sh
 
-    The Module directory contain two sub directories VPC and EC2 which are two separate reusable modules
-    Each module contains configuration files that are perculiar to the module.
+    The Module directory contain two sub directories VPC and EC2 which are two separate reusable modules. Each module contains configuration files that are perculiar to the module.
 
     The VPC directory contains
     1. main.tf
