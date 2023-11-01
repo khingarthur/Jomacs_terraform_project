@@ -1,8 +1,15 @@
-OBJECTIVES
+<h1> JOMACS TERRAFORM PROJECT <h1>
+----------------------------------------------------------------------------------
+<h2>Author : Frederick Arthur<h2>
+<h2>Date : 31/10/2023<h2>
+-----------------------------------------------------------------------------------
+
+<h2>OBJECTIVES<h2>
+---------------
 This Terraform project deploys a secure VPC environment in AWS with an EC2 instance running an Nginx web server. The EC2 instance resides within a private subnet and is accessible to the outside world via a load balancer. Traffic to the EC2 instance is routed through a NAT gateway.
 
-PROJECT STRUCTURE
-
+<h2>PROJECT STRUCTURE<h2>
+-----------------
     Within this Jomacs terraform project are three directories
    * .github repo
    * Main repo
@@ -44,14 +51,15 @@ PROJECT STRUCTURE
     
     The .githubactions directory contains workflow in a yml file for automating the deployement process using GitHub actions.
 
-ASSUMPTIONS
+<h2>ASSUMPTIONS<h2>
+-----------
 1. This project include a backend configuration where state files are stored for security reasons. It is therefore assumed that an s3 bucket already exist for that. If not, comment out the backend configuration in the provider.tf to avoid errors when applying.
 
 2. It is assumed that the keypair attached to the ec2 instance already exist. So the keyname in the ec2 configuration must reference that. If not then comment out the keyname section
     
 
-HOW TO DEPLOY THE INFRASTRUCTURE
-
+<h2>HOW TO DEPLOY THE INFRASTRUCTURE<h2>
+--------------------------------
     An aws s3 bucket must first be created, This is because an S3 backend have been decleard where terraform state files will be stored. Else comment the backend configuration out.
 
     Fork or clone the repository to your local environment
@@ -62,20 +70,14 @@ HOW TO DEPLOY THE INFRASTRUCTURE
     There are two ways for deploying the infrastructure
 
     1. Automation
-<<<<<<< HEAD
     Push the "Main" directory to your github account, deployement of the infrastructure begins auto,atically.
     
-=======
-    Push the "Main" directory to your github account.
-    NOTE: The workflow needs user interaction to either create or destroy, this make user ability to destroy the infrastructure by re running the job and inserting 2 when         asked.
-    You can comment out the user input to avoid user interaction.
->>>>>>> 4d0d6e5d0c5759cb3c7889e3574f0400b91dda55
 
     2. Manual 
     Run terraform init, to initialize the terraform provider configuration
     Run terraform plan, and terraform apply to have the resources created.
 
-STEPS TO VALIDATE THE SETUP
+<h2>STEPS TO VALIDATE THE SETUP<h2>
     To validate this setup, copy and paste the load balancer dns name that is outputed after your resources have been created into your browser.
     You should get a response Congratulating you for installing Nginix - just like the image below:
     NOTE: Wait for a while so the the ec2 instance initialises and the user data runs copletely.
