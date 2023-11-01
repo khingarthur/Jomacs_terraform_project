@@ -43,7 +43,7 @@ jobs:
         echo "2. Destroy"
         read -p "Enter an action: " choice
         if [ "$choice" == "1" ]; then
-         terraform apply -auto-approve tfplan
+         terraform apply -auto-approve 
         elif [ "$choice" == "2" ]; then
          terraform destroy -auto-approve
         else
