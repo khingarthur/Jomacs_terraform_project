@@ -6,7 +6,7 @@ resource "aws_instance" "main" {
   subnet_id                   = var.ec2_subnet_id
   security_groups             = [var.instance_sg]
   associate_public_ip_address = var.bool_2
-  key_name                    = "my-keypair"
+  key_name                    = "${var.keyname}"
   user_data                   = base64encode(file("script.sh"))
 
   tags = {

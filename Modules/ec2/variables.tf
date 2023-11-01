@@ -23,3 +23,9 @@ variable "region" {
   default = "us-east-2"
   type    = string
 }
+
+variable "keyname" {
+  description = "Name of key pair to use for ssh"
+  type        = string
+  default     = "Linux_machine"
+}
