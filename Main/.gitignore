@@ -2,11 +2,7 @@
 **/.terraform/* 
 *.terraform* 
 .terraform* 
- 
-# .tfstate files 
-*.tfstate 
-*.tfstate.* 
-*.tfstate* 
- 
+
 # Crash log files 
 crash.log 
+terraform.tfstate
