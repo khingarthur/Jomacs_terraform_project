@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: terraform
+        working-directory: source/Main
     
     steps:
     - name: Checkout Repo
@@ -42,6 +42,6 @@ jobs:
       env:
         SOURCE_DIR: './githubactions/tf.tfstate'
         AWS_REGION: 'us-east-2'
-        AWS_S3_BUCKET: 'day5-state-bucket'
+        AWS_S3_BUCKET: 'my-main-vpc-bucket'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
