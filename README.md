@@ -1,15 +1,14 @@
 <h1> JOMACS TERRAFORM PROJECT <h1>
-----------------------------------------------------------------------------------
+
 <h2>Author : Frederick Arthur<h2>
 <h2>Date : 31/10/2023<h2>
------------------------------------------------------------------------------------
 
 <h2>OBJECTIVES<h2>
----------------
+
 This Terraform project deploys a secure VPC environment in AWS with an EC2 instance running an Nginx web server. The EC2 instance resides within a private subnet and is accessible to the outside world via a load balancer. Traffic to the EC2 instance is routed through a NAT gateway.
 
-<h2>PROJECT STRUCTURE<h2>
------------------
+<h2>PROJECT STRUCTURE<h2
+
     Within this Jomacs terraform project are three directories
    * .github repo
    * Main repo
@@ -52,14 +51,14 @@ This Terraform project deploys a secure VPC environment in AWS with an EC2 insta
     The .githubactions directory contains workflow in a yml file for automating the deployement process using GitHub actions.
 
 <h2>ASSUMPTIONS<h2>
------------
+
 1. This project include a backend configuration where state files are stored for security reasons. It is therefore assumed that an s3 bucket already exist for that. If not, comment out the backend configuration in the provider.tf to avoid errors when applying.
 
 2. It is assumed that the keypair attached to the ec2 instance already exist. So the keyname in the ec2 configuration must reference that. If not then comment out the keyname section
     
 
 <h2>HOW TO DEPLOY THE INFRASTRUCTURE<h2>
---------------------------------
+
     An aws s3 bucket must first be created, This is because an S3 backend have been decleard where terraform state files will be stored. Else comment the backend configuration out.
 
     Fork or clone the repository to your local environment
