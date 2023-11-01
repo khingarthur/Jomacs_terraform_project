@@ -28,7 +28,6 @@ variable "keyname" {
   description = "Name of key pair to use for ssh"
   type        = string
   default     = "Linux_machine"
-  sensitive   = true
 }
 
 variable "sn2_nam" {
