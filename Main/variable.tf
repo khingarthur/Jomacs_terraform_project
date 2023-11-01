@@ -31,13 +31,6 @@ variable "keyname" {
   sensitive   = true
 }
 
-variable "keypath" {
-  description = "Path of key pair to use for ssh"
-  type        = string
-  default     = "~/.ssh/my-keypair.pub"
-  sensitive   = true
-}
-
 variable "sn2_nam" {
   description = "Name for the Public Subnets"
   type        = list(string)
